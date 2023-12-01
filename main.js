@@ -65,18 +65,27 @@ base a chi fa il punteggio più alto.
 /*  */
 /* } */
 /*  */
-function generateRandomInt(min, max) {
-    return Math.floor((Math.random() * (max + 1 - min)) + min);
-    console.log(generateRandomInt(1, 6));
-}
-
 document.querySelector('#dice').addEventListener('click', function () {
-    /* const dice2 = document.querySelector('#dice-2') */
-    /* console.log(dice2); */
-    min = 1;
-    max = 6;
-    return Math.floor((Math.random() * (max + 1 - min)) + min);
-    document.querySelector('#dice-1').innerHTML = generateRandomInt(1, 6)
+    const dice1 = document.querySelector('#dice-1').innerHTML = Math.floor((Math.random() * 6) + 1);
+    const dice2 = document.querySelector('#dice-2').innerHTML = Math.floor((Math.random() * 6) + 1);
+
+
+    if (dice1 > dice2) {
+
+        document.querySelector('h3').innerHTML = "Il player 1 ha vinto!"
+        
+    } else if (dice1 < dice2) {
+
+        document.querySelector('h3').innerHTML = "Il player 2 ha vinto!"
+        
+    } else {
+
+        document.querySelector('h3').innerHTML = "Il risultato è pari!"
+
+    }
+
+
 
 
 })
+Math.floor((Math.random() * 6) + 1);
