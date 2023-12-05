@@ -39,9 +39,9 @@ document.querySelector('#verificate').addEventListener('click', function () {
     console.log(email_verificate);
     const list_email = ['nicola71@gmail.com', 'pasqualinomolosso@gmail.com', 'pippo11@gmail.com',
     'paolo2000@gmail.com'];
-    const approvate = email_verificate.includes(list_email);
+    const approvate = list_email.includes(email_verificate);
 
-    if (email_verificate == approvate) {
+    if (approvate == true) {
         alert('You can log');
     } else {
         alert("You aren't registrede");
